@@ -115,15 +115,15 @@ const icons = [
 
 getCard(icons);
 
-document.getElementById("search-bar").addEventListener(`keydown`, function(){
+document.getElementById("search-bar").addEventListener(`keyup`, function(event){
 	let valueSearch = document.getElementById("search-bar").value;
-	if(valueSearch.length < 1){
-		return
-	}else if(valueSearch.length == 0){
+
+	console.log(valueSearch)
+	if(valueSearch.length == 1){
 		document.getElementById("card-container").innerHTML = ""
 		getCard(icons);
 	}
-	
+
 	let icone= searchIcon(icons,valueSearch);
 	document.getElementById("card-container").innerHTML = ""
 	getCard(icone)
