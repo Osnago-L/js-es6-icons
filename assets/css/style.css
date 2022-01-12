@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ICONS CARDS  */
+.icon-card-local{
+  width: 140px;
+  height: 160px; 
+  border-radius: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.082);
+  box-shadow: 2px 2px 15px black;
+}
+.icons-size-local{
+    font-size: 50px;
+}
+.icon-text-size-local{
+    font-size: 20px;
+}
+/* ----------- */
