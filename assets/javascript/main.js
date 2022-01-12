@@ -1,4 +1,4 @@
-[
+const icons = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +112,19 @@
 		color: 'blue'
 	}
 ];
+
+getCard(icons);
+
+document.getElementById("search-bar").addEventListener(`keydown`, function(){
+	let valueSearch = document.getElementById("search-bar").value;
+	if(valueSearch.length < 1){
+		return
+	}else if(valueSearch.length == 0){
+		document.getElementById("card-container").innerHTML = ""
+		getCard(icons);
+	}
+	
+	let icone= searchIcon(icons,valueSearch);
+	document.getElementById("card-container").innerHTML = ""
+	getCard(icone)
+});
